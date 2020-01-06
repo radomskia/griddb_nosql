@@ -1,0 +1,40 @@
+loty <- read.csv("C:/Users/Dell Optiplex 9020/Desktop/airDF.csv")
+loty
+head(loty, 10)
+head(loty$Year == 2008)
+ncol(loty)
+nrow(loty)
+sum(loty$Origin == "MEM")
+sum(loty$Origin == "MEM") + sum(loty$Origin != "MEM")
+library(ggplot2)
+library(dplyr)
+
+head <- function(diamonds, cut, color, carat, price, tidyverse, readr, head, ggplot2, table1) {
+  head(diamonds)
+  ggplot(data = diamonds) + geom_count(mapping = aes(x = cut, y = color))
+  ggplot(data = diamonds) + geom_point(mapping = aes(x = carat, y = price))
+  getwd()
+  library(tidyverse)
+  library(readr)
+  nasze_dane <- read.csv("C:/Users/Dell Optiplex 9020/Desktop/Dane do kursu R Alicja Wolny/vnozar/sprzedaz.csv")
+  nasze_dane
+  nasze_dane(head)
+  write_csv("C:/Users/Dell Optiplex 9020/Desktop/Dane do kursu R Alicja Wolny/vnozar/sprzedaz.csv")
+  nasze_dane <- write.csv("C:/Users/Dell Optiplex 9020/Desktop/Dane do kursu R Alicja Wolny/vnozar/sprzedaz.csv")
+  library(tidyverse)
+  library(ggplot2)
+  head(table1)
+}
+table1 %>%
+  mutate(rate = cases / population * 10000)
+table4a %>%
+gather('1999', '2000', key = 'year', value = 'cases')
+tidy4a <- table4a %>%
+  gather('1999', '2000', key = 'year', value = 'cases')
+tidy4b <- table4b %>%
+  gather('1999', '2000', key = 'year', value = 'population')
+left_join(tidy4a, tidy4b)
+table3
+table3 %>%
+  separate(rate, into = c("cases", "population"))
+
